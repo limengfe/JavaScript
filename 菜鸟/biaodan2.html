@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期检测</title>
+    <script>
+        function  validateForm(){
+            var x=document.forms['myForm']['email'].value;//把myFrom表单 email的值 赋值给x
+            var atpos=x.indexOf("@");      //将@的个数赋值给变量atpos         
+            var dotpots=x.lastIndexOf('.');//将.的个数赋值给dotpots
+            if(atpos<1||dotpos<atpos+2||dotpos+2>=x.length){//如果@个数小于1，.
+                alert("邮件地址格式错误");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myForm" onsubmit="validateForm();" method="POST">
+    Email: <input type="text" name="email">
+           <input type="submit" value="提交">
+    </form>
+</body>
+</html>

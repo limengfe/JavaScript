@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变HTML的内容</title>
+</head>
+<body>
+    <h1>我的第一段JavaScript</h1>
+    <p id="demo">JavaScript可以改变HTML元素的内容</p>
+    <script>
+          function myfunction(){
+              x=document.getElementById("demo");
+              x.innerHTML="Hello JavaScript!";
+          }
+         </script>
+         <button type="button" onclick="myfunction()">点我啊</button>
+</body>
+</html>

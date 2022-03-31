@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript const</h2>
+    <p>const定义的变量并非变量，并非不可改变，它定义的一个常量引用的值。
+        使用const定义的对象或数组，其实是可变的。</p>
+    <p id="demo"></p>
+    <script>
+        // 创建常量对象
+        const car = {
+            name:"宝马",
+             model:"500", 
+             color:"white"
+            };
+          // 修改属性:
+        car.color = "red";
+          // 添加属性
+        car.owner = "飞飞";
+         // 显示属性
+        document.getElementById("demo").innerHTML = "车主是 " + car.owner; 
+        </script>
+</body>
+</html>

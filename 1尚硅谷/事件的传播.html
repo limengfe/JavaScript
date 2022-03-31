@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+          width: 300px;
+          height: 300px;
+          background-color: blue;
+        }
+        #box2{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        #box3{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+       window.onload = function (){
+          var box1 = document.getElementById("box1");
+          var box2 = document.getElementById("box2");
+          var box3 = document.getElementById("box3");
+           box1.onclick = function () {
+               alert('大大大')
+           }
+           box2.onclick = function () {
+               alert('中中中')
+           }
+           box3.onclick = function () {
+               alert('小小小')
+           }
+           //当小的触发时候  中  大也依次运行  这就是事件·的传播问题
+            // 关于这个问题
+            // 微软想法是  应当先触发自己，然后触发祖先  也就是事件的冒泡阶段指向
+            //网景公司 应触发最外层 就是祖先  然会在触发后代元素
+            //W3C综合了  毕竟人家说的算
+            //将事件传播i分为3个阶段
+            //1.捕获阶段     从外层开始进行捕获  但不会触发事件   外层document
+            //2.目标阶段     捕获到目标，然后触发事件
+            //3.冒泡事件     从目标向祖先传递，依次触发        
+              //如果希望在捕获阶段触发  可以将addEventListener第三个参数设置为true
+               //一般情况都是设置为false，不一样在捕获阶段触发事件
+      
+
+       }
+
+
+    </script>
+</head>
+<body>
+    <div id="box1">
+          <div id="box2">
+              <div id="box3"></div>
+        </div>
+
+  </div>
+    
+   
+</body>
+</html>

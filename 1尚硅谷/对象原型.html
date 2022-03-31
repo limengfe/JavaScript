@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 减少全局变量使用，或者使用时发生冲突，所以可以使用对象模型来解决
+        function MyClass(age){
+          this.age = age;
+        }
+         MyClass.prototype.name = "我是原型对象的name"
+
+        var mc  = new MyClass(18);
+
+        // 自身没有，则取原型中去找
+        console.log(mc.name); //如果没有15行 ，结果时undefined   现在结果是'我是原型对象的name'
+
+        // in访问是否有某个属性
+        console.log('name' in mc);//true    如果自身没有则取原型中找，原型也算。
+
+        // 可查自身是否拥有  使用hasOwnProperty()
+
+        console.log(mc.hasOwnProperty('name'));//false
+        console.log(mc.hasOwnProperty('age'));//true
+    
+        console.log(mc._proto_);//undefined  查找mc是否有原型链
+       
+    </script>
+</body>
+</html>

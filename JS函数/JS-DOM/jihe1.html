@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javaScript</h2>
+    <P>1</P>
+    <P>2</P>
+    <P id="demo"></P>
+    <script> //myCollection TagName
+        var myCollection = document.getElementsByTagName("p");//所有类型为p的 集合起来
+        document.getElementById("demo").innerHTML="文档包含："+myCollection.length+"段"
+    </script>
+</body>
+</html>

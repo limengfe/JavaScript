@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.创建  首字母大写
+        // 2.用this指向
+        //3.逐行执行
+        //4.将新建的对象作为返回值
+
+        // this 
+        // 1.当以函数调用，this就是window
+        // 2.当以方法调用，谁调用是谁
+        // 3.构造函数调用，this是新建的对象
+       function  Person(name, age,gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+       }
+       var fei = new Person('李孟飞',18,'男');  //加new就是构造函数，不加就不是
+       document.write('我是'+fei.name+'今年'+fei.age+'性别为'+fei.gender); 
+       console.log(fei);  //  对象的执向是Person  而不是Dog或者其他·1的
+
+       function Dog(){
+
+       }
+       var dog = new Dog();
+       console.log(dog);
+        
+    </script>
+</body>
+</html>

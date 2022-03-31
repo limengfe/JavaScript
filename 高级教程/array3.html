@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1">字母</p>
+    <button onclick="myFunction1()">按字母排序</button>
+    <p id="demo2">升序</p>
+    <button onclick="myFunction2()">按字母排序</button>
+    <p id="demo3">降序</p>
+    <button onclick="myFunction3()">按字母排序</button>
+    <script>
+        function myFunction1() {
+            var foods=["tae","ear","paly"]
+            foods.sort();  //sort()排序方法
+            document.getElementById("demo1").innerHTML=foods;
+         }
+
+        function myFunction2() {
+            var p=[66,6,666];
+            p.sort(function(a,b){return a-b});//数字升序
+            document.getElementById("demo2").innerHTML=p;
+           }
+
+        function myFunction3() {
+            var q=[66,6,666];
+            q.sort(function(a,b){return b-a});//数字j降序
+            document.getElementById("demo3").innerHTML=q;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //基本数据类型  Number String Boolean Null Undefined
+        //引用数据类型  对象
+        //基本数据类型可u一转化为引用
+        // new Number()  new String()  new Boolean()
+        //举例Number 其他类似
+        var b = new Number(1);
+        document.write(typeof b);//object
+        //然后可以添加属性
+        b.name = "li";
+        document.write(b.name); //li
+        //但是有缺点 ，造成原数据无法比较  实际开发也不会用
+        
+        //还记得 toString()这个方法 是使浏览器临时将数据转化为字符串，执行完立马就恢复数据类型 添加的属性也无法访问
+        var a = 1;
+        a.toString();
+        a.name = 'li';
+        document.write(a.name);//undefined  并没有添加成功  只是临时可以使用。
+    </script>
+</body>
+</html>

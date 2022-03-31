@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 研究以下
+        var a = 1;
+        
+        function fun1(){ document.write(a)}
+
+         fun1();//1 
+         
+        var fun2 = function(){ document.write(a)}
+
+        fun2();//1  也可以在外部找到
+        
+        var b = 2;
+        function fun3() {
+            var b = 3                //⭐ 如果去掉var  则函数内部的会变成 最外部的即window  则26行输出结果为3
+            document.write(b);
+          }
+          
+          fun3();//3  先找的内部的 而不是2
+        document.write(b);//2     在外部先找的外部的 var  b = 2
+
+    </script>
+</body>
+</html>

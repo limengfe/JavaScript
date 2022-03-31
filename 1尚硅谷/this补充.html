@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = '全局';
+
+        function fn(){
+            document.write(this.name);
+        }
+        
+
+         var obj1 = {
+             name:"飞",
+              f:fn
+         }
+
+         var obj2 = {
+             name:"牛",
+             f : fn
+         }
+         
+         fn();//全局
+         document.write('<br>');
+         obj1.f();//飞
+         document.write('<br>');
+         obj2.f();//牛
+    </script>
+</body>
+</html>

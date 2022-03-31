@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <p>是否周末</p>
+    <button type="button" onclick="myFunction()">点击这里</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var x;
+            var d=new Date().getDay();
+            switch(d){
+                case 6:x="今天是周六";
+                case 7:x="今天是周末";
+                default:x="期待周末";
+            }
+            document.getElementById('demo').innerHTML=x;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           window.onload = function ( ){
+            //关于Location
+            //属性需要连接服务器使用
+            
+            //对象
+            //assign()	加载新的文档。
+            //reload()	重新加载当前文档。
+            //replace()	用新的文档替换当前文档。
+            var btn = document.getElementById('btn');
+
+            btn.onclick = function (){
+            //   location = "https://www.baidu.com"; //直接修改其值，相当于写了一个a
+
+            //  location.assign('https://www.baidu.com')//几乎和修改值一样，，但是又回退按钮可以使用
+                // location.reload(true);//相当于刷新按钮 但是可能输入的文本信息不会被清空，可以设置true来强制清空
+
+                location.replace('https://www.baidu.com')//也是加载新的页面，但是不会有回退按钮，安全取代之前页面
+            }
+
+
+
+           }
+    </script>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <input type="text" name="" id="">
+</body>
+</html>

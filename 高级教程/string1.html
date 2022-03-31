@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">You are good but I better than you.</p>
+    <p id="demo">0</p>
+    <button type="button" onclick="myFunction()">点我</button>
+    <script>
+        function myFunction() {
+            var str=document.getElementById("p1").innerHTML;
+           var n= str.indexOf("good");
+           document.getElementById("demo").innerHTML=n+1;//+1是真正的位置，不+1是上个与字符串的末位置。
+        }
+    </script>
+</body>
+</html>

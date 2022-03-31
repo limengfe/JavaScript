@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+         //关于History 有一个属性 length 可以求访问的网页数量
+         //方法：    back()回退到上一个
+                //  forward()下一个页面    
+                //  go()指定跳转到那个  整数表示 正表示前进 负值表示回退
+                document.getElementById('go-back').addEventListener('click', () => {
+  history.back();
+});
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <button id="go-back">Go back!</button>
+</body>
+</html>

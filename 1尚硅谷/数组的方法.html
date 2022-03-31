@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 向末尾添加元素push()
+        //从末尾删除一个pop()
+        // 向头部添加元素 unshift()
+        //从头部删除一个元素shift()
+        
+
+        //注释的结果是依次执行  执行20行时  后面代码可以删了
+        let arr = ['飞飞','牛牛'];
+        arr.push('ff','nn');
+        console.log(arr);//飞飞，牛牛，ff，nn
+
+        arr.pop();
+        console.log(arr);//飞飞，牛牛，ff
+
+        arr.unshift('李','牛');
+        console.log(arr);//李，牛，飞飞，牛牛，ff
+
+        arr.shift();
+        console.log(arr);//牛，飞飞，牛牛，ff
+    </script>
+</body>
+</html>

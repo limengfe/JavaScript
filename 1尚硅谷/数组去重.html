@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES6方法简单吧
+        // 法一
+        let  arr = [1,1,1,2,2,1,3,3,4,5];
+        let  arr2 = [...new Set(arr)];
+        console.log(arr2);
+        // ES6法二
+        const a = ['a','b','c','c','a','b','d','a'];
+        let aa =Array.from(new Set(a));
+        console.log(aa);
+
+        //JavaScript ES5
+        var x = [1, 5, 6, 0, 7, 3, 0, 5, 9,5,5];
+             function unique(arr) {
+                    for (var i = 0, len = arr.length; i < len; i++) {
+                        for (var j = i + 1, len = arr.length; j < len; j++) {
+                            if (arr[i] === arr[j]) {
+                                x.splice(j, 1);
+                                j--;        // 每删除一个数j的值就减1
+                                len--;      // j值减小时len也要相应减1（减少循环次数，节省性能）   
+                                // console.log(j,len)
+
+                            }
+                        }
+                    }
+                    return x;
+                }
+                console.log(unique(x));       //  1, 5, 6, 0, 7, 3, 9
+    </script>
+</body>
+</html>

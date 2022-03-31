@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>在函数内使用‘use strict’只在函数内报错。</p>
+        <p>按下F12开启调试模式。</p>
+        <script>
+            x=3.14;//不报错
+            myFunction();
+            function myFunction(){
+                "use strict";
+                y=6.28;//报错，未定义。
+                z={name:"李孟飞",age:"18"};//不允许未定义对象；对象也属于变量。
+            }
+        </script>
+</body>
+</html>

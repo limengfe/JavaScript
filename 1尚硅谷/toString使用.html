@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age,gender){
+            this.name = name ;
+            this.age = age;
+            this.gender = gender;
+        }
+        var pe = new Person('ni',18,'男');
+        document.write(pe+"<br>");//[object Object] 为什么这样显示  因为使用了原型的toString方法
+        //解决办法   将toString修改
+        function Per(name,age,gender){
+            this.name = name ;
+            this.age = age;
+            this.gender = gender;
+        }
+        //修该Per原型toString的方法
+        Per.prototype.toString = function(){
+            return "Per[name="+this.name+",age="+this.age+",gender="+this.gender+"]"
+        }
+        var p = new Per('wo',18,'男');
+        document.write(p);
+        document.write("<br>")
+        var q = new Per('飞飞',18,'猛男');
+        document.write(q);
+
+            
+            
+
+    </script>
+</body>
+</html>

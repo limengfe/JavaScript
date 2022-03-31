@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>输入数字并点击验证按钮：</p>
+    <input id="id1" type="number" min="100" max="300" required>  <!--min最小值，max最大值-->
+    <input type="submit" value="验证" onclick="myFunction()">
+    <p>如果数字小于100或者大于300，会提示错误信息。</p>
+    <p id="demo"></p>
+    <script>
+     function  myFunction(){
+         var inObj=document.getElementById('id1');//找到元素id1赋值给inObj，把框赋值给一个变量。
+         if(inObj.checkValidity()== false){
+             document.getElementById('demo').innerHTML=inObj.validationMessage;//浏览器错误信息提示
+          }
+          else{
+              document.getElementById("demo").innerHTML="输入正确"
+          }
+
+     }
+    </script>
+</body>
+</html>

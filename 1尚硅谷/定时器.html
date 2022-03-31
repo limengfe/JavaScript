@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script>
+    window.onload = function (){
+      var count = document.getElementById('count');
+       var num = 1;
+       //添加定时器  必须使用一个变量接收，不然无法停止 
+       var timer = setInterval(function(){    //定时器 第一个参数是回调函数，第二个是时间 -单位是毫秒  
+           count.innerHTML = num++;
+           if(num == 11){
+               //解除 
+               clearInterval(timer);
+           }
+       },1000)
+
+
+
+    }
+  
+
+    </script>
+</head>
+<body>
+    <p id="count">1</p>
+</body>
+</html>

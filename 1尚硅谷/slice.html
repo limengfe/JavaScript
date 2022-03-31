@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // slice()使用  
+        // 该方法不会改变 元素数组，而是将取到的元素封装一个新数组返回
+            // --参数
+            // 1.开始截取位置    包括开始索引
+            // 2.结束位置        不包括结束索引
+            var arr = ['孙悟空','猪八戒','沙和尚','唐三彩','李孟飞'];
+            var result = arr.slice(1,3);  //1-猪..   3.--唐...
+            console.log(result);    //猪八戒，沙和尚
+
+        //splice()的使用   可以实现数组修改位置 ，删除元素 ，添加元素
+        //会影响数组元素
+          //参数：
+             //1.开始位置
+             //2.删除数量
+             //3.添加新元素   
+             var arr2 = ['孙悟空','猪八戒','沙和尚','唐三彩','李孟飞']; 
+             arr2.splice(2,1,'牛牛');  //2-沙和尚  删除   此处添加牛牛
+             console.log(arr2);       //'孙悟空','猪八戒','牛牛','唐三彩','李孟飞'
+    </script>
+</body>
+</html>

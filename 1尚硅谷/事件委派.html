@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+       var btn01 = document.getElementById("btn010");
+        var allA = document.getElementsByTagName("a");
+        var u1 = document.getElementById("u1");
+        var btn01 = document.getElementById('btn01');
+        
+         //绑定u1导致点击li所有的页面都会触发事件  这就是委派 也是冒泡导致的
+        
+        //添加新的链接
+        btn01.onclick = function () {
+            var li = document.createElement("li");
+            li.innerHTML = "<a href='javascript:;'' class='link'>新链接</a>"
+            u1.appendChild(li);
+        }
+
+        //解决方法     使用target  设置     触发的对象
+        u1.onclick = function (event) {
+             event = event || window.event;   //兼容性
+             if(event.target.className =='link'){
+                 alert('我是ul单击响应函数')
+             }
+        }
+
+      }
+
+    </script>
+</head>
+<body>
+    <button id="btn01">添加超链接</button>
+    <ul id="u1" style="background-color: #bfa;">
+        <li> <a href="javascript:;" class="link">链接1</a></li>
+        <li> <a href="javascript:;"  class="link">链接2</a></li>
+        <li> <a href="javascript:;"  class="link">链接3</a></li>
+        
+    </ul>
+</body>
+</html>

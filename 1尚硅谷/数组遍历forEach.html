@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach()方法需要通过使用函数作为参数来使用               IE及其以下版本不能使用
+        //系统会给出三个参数
+        // 第一个是遍历的元素
+        // 第二个是索引
+        // 第三个是数组名
+        let arr = ['孙悟空','猪八戒','沙和尚','唐三彩'];
+        
+        arr.forEach( function(value,index,arr){
+           console.log(index + ':'+value);                       //回调函数。
+        });
+    </script>
+</body>
+</html>

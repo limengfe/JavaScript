@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        // 通过js添加的样式是内联样式优先级最高 ，所以css设置的才会改变
+        window.onload = function(){
+            var box1 = document.getElementById('box1');
+            var btn = document.getElementById('btn');
+            btn.onclick= function(){  //修改样式  语法：元素.style.样式名 = 样式值
+                box1.style.width = "300px";
+                box1.style.height = '300px';
+                box1.style.backgroundColor = "Black";  //CSS样式-无法使用  需要使用驼峰法 去掉- 后面首字母大写
+            }
+            var btn2 = document.getElementById('btn2');
+                btn2.onclick = function () {
+                //读取box1的样式
+                //语法：元素.style.样式名  有缺点 只能读取通过JS添加的样式内容
+                document.write('宽度是'+box1.style.width+',');
+                document.write('高度是'+box1.style.height+',');
+                document.write('背景颜色是'+box1.style.backgroundColor);
+            }
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div><br>
+    <button id="btn">点我以下</button>
+    <button id="btn2">读取样式信息</button>
+</body>
+</html>

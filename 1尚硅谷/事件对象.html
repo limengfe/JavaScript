@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #big{
+             width: 300px;
+             height: 100px;
+             border: 1px solid rgb(29, 27, 24);
+            }
+            #small{
+             width: 300px;
+             height: 35px;
+             border: 1px solid rgb(29, 27, 24);
+            }
+    </style>
+    <script>
+        window.onload = function(){
+        //    当事件触发时，浏览器将实参传递到响应函数
+        //     比如 鼠标的坐标，键盘在那按下。  
+           var big = document.getElementById('big');
+           var small = document.getElementById("small");
+
+           big.onmousemove = function () {
+               if(!event){  //一般浏览器自带的属性。  解决的兼容性问题
+                   event = window.event;  //IE8及以下会将事件对象作为window对象属性保存的
+               }
+               //或者也可以这样写 event = event || window.event  也可以解决兼容性问题
+               var x = event.clientX;     //鼠标所在的X偏移量
+               var  y = event.clientY;     //鼠标所在的Y偏移量
+               small.innerHTML = ('x=' + x + ',' + 'y=' + y);
+
+           }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="big"></div><br>
+    <div id="small"></div>
+</body>
+</html>

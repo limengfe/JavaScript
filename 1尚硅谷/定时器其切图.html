@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+           var btn1 = document.getElementById("btn1");
+           var btn2 = document.getElementById("btn2");
+           var img = document.getElementById('img')
+           var imgStr = ['../img/q (1).jpg','../img/q (2).jpg','../img/q (3).jpg',
+           '../img/q (4).jpg','../img/q (5).jpg','../img/q (6).jpg'];
+           var index = 0;
+           var timer;
+           
+           btn1.onclick = function (){
+               clearInterval(timer);
+            timer = setInterval(function(){
+              index++;
+              
+              index = index % imgStr.length;
+              img.src = imgStr[index];
+             },1000)
+           }
+
+           btn2.onclick = function (){
+               timer = clearInterval(timer);
+           }
+
+
+      }
+
+    </script>
+</head>
+<body>
+    <img id="img" src="../img/q (1).jpg" alt=""><br>
+    <button id="btn1">开始</button>
+    <button id="btn2">结束</button>
+    
+</body>
+</html>

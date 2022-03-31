@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+         //主要有2种方法
+         //1.currentStyle    仅支持IE8以下的浏览器
+         //2.getComputedStyle(参数1，参数2) 参数1为元素   样式2一般为null
+         // 也有缺点 不支持IE8及以下
+         
+        //  所以需要处理兼容性问题
+        var box1 = document.getElementById('box1');
+        var btn1 = document.getAnimations('btn1');
+         function getStyle (obj , name) {       //obj 样式元素名 name 样式名
+            //  if(window.getComputedStyle){
+            //      //如果窗口有这个方法 说明不是IE8及以下
+            //      return getComputedStyle(obj , null)[name];
+            //  }else{
+            //      //就是IE8及以下
+            //       return obj.currentStyle[name];  //
+            //  }
+
+            if(obj.currentStyle){
+                return obj.currentStyle[name];
+            }else{
+                return getComputedStyle(obj,null)[name];
+            }
+            
+        }
+             alert(getStyle(box1,'width'));  
+               
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div><br>
+    <button id="btn1">获取样式</button>
+</body>
+</html>

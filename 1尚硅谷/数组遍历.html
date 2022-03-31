@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6遍历最简单  for(let 变量 of 数组名)
+        //法一
+        var arr = ['如来','观音','猴子','八戒','白骨精','红孩儿'];
+        for(let value of arr){
+            console.log(value);
+        }
+        //法二
+        for(let value in arr){
+            console.log(arr[value]);
+        }
+        for (let value in arr) {   //for in 推荐用在遍历对象属性
+        console.log(value, ':', arr[value])
+        }
+
+    </script>
+</body>
+</html>

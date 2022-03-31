@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+          var box1 = document.getElementById('box1');
+             //鼠标滚动事件onmousewheel，火狐不支持 。
+             //火狐支持的属性是DOMMouseScroll 该属性需要使用addEventListener绑定
+            
+            //为其他浏览器绑定
+             box1.onmousewheel =function () {
+                
+                 //火狐绑定
+             }
+              bind(box1,'DOMMouseScroll',box1.onmousewheel);
+
+
+
+             function bind (obj,eventStr,callback){
+            if(obj.addEventListener){
+              //大部分浏览器
+              obj.addEventListener(eventStr,callback,false)    //this指调用对象
+            }else{
+                //IE8及以下
+                obj.attachEvent('on' +eventStr,callback);
+            }
+         }
+          var btn2 = document.getElementById("btn2")     
+            //   bind(btn2,'click',function(){alert('hello')})    //this指window 修改此步
+            bind(btn2,'click',function(){callback.call(obj)})     //回调函数形式就好了
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

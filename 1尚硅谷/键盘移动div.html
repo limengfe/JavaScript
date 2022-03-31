@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #box1{
+           width: 100px;
+           height: 100px;
+           background-color: aquamarine;
+           position: absolute;
+       }
+
+    </style>
+    <script>
+    window.onload = function () {
+     var box1 = document.getElementById('box1');
+         document.onkeydown = function (event) {
+             event = event ||window.event;
+             var x = 10;
+              //加速移动
+              if (event.ctrlKey){
+                     x=100;
+              }
+             switch(event.keyCode){
+               case 37://console.log('向左');break;
+               box1.style.left = box1.offsetLeft - x + "px";
+               break;
+               case 38://console.log('向上');break;
+               box1.style.top = box1.offsetTop - x + "px";
+               break;
+               case 39://console.log('向右');break;
+               box1.style.left = box1.offsetLeft + x + "px";
+               break;
+               case 40://console.log('向下');break;
+               box1.style.top = box1.offsetTop + x + "px"
+               break;
+            }
+         }
+    
+
+
+
+
+    }
+
+
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

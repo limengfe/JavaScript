@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳过循环</title>
+</head>
+<body>
+    <p>点击下面的按钮，该循环会跳过i=3的数字</p>
+    <button type="button" onclick="myFunction()">点我</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var x="", i=0;
+            for(i=0;i<10;i++){
+                if(i==3){
+                    continue;
+                }
+                x=x+"The number is "+i+"<br>";
+            }
+            document.getElementById('demo').innerHTML=x;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建一个变量
+         var obj = new Object()
+         obj.name = "fei";
+         obj.age = 18;
+         obj.say = function hello(){document.write('Hello!')};
+         document.write(obj.say);//function(){document.write('Hello!')}
+         document.write('<br>');
+         //调方法
+         obj.say(); //Hello!
+         document.write('<br>')
+         var obj2 = { 
+             name:"Fei",
+             age:18,
+             hello:function(){ document.write('很好啊')}
+         }
+         //调方法
+         obj2.hello();
+    </script>
+</body>
+</html>

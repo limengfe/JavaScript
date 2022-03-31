@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参数传值</title>
+</head>
+<body>
+    <h4>点击其中一个按钮，来调用带参数的函数</h4>
+    <button type="button" onclick="myfunction('李孟飞','Student')">点我</button>
+    <button type="button" onclick="myfunction('刘亚丽','Wife')">点我</button>
+    <script>
+        function myfunction (name,job){
+         alert("Welcome"+name+",the"+job);
+        }
+    </script>
+</body>
+</html>

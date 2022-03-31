@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  reg1 = new RegExp();//创建对象的语法
+        //字面量写法  其中 i g 顺序没有影响
+        // var reg = /表达式/匹配模式   i执行对大小写不敏感的匹配。g执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+        // [abc]	查找方括号之间的任何字符。
+        //       /a|b/    |表示或
+        //       /[ab]/   []也表示或
+        //       ^表示非
+        var reg1 = /a/;
+        var str1 = 'abc';
+        console.log(reg1.test(str1));//true
+        // [^abc]	查找任何不在方括号之间的字符。
+        var reg2 = /[^a]/;
+        var str2 = 'bcd';
+        console.log(reg2.test(str2));//true
+        // [0-9]	查找任何从 0 至 9 的数字。
+        var reg3 = /[0-9]/
+        var str3 ='123456';
+        console.log(reg3.test(str3));//true
+        // [^0-9]	查找任何非 0 至 9 的数字。
+        var reg4 = /[^0-9]/
+        var str4 = '123a';
+        console.log(reg4.test(str4));//true
+        // [a-z]	查找任何从小写 a 到小写 z 的字符。
+
+        // [A-Z]	查找任何从大写 A 到大写 Z 的字符。
+        
+        
+        
+    </script>
+</body>
+</html>

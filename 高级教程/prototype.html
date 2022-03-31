@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript 对象</h2>
+    <p id="demo"></p>
+     <script>
+         function person(first,last,age,) { //不可以在构造好的对象属性添加新的
+             this.first=first;
+             this.last=last;
+             this.age=age;
+             this.love="运动"   //要添加一个新的属性需要在在构造器函数中添加
+         };
+         var Father=new person("李","孟飞","18");
+         var Mother=new person("刘","亚丽","17");
+         document.getElementById("demo").innerHTML="爸爸是"+Father.first+Father.last+"母亲是"+
+         Mother.first+Mother.last+"喜欢"+Mother.love;
+     </script>
+</body>
+</html>

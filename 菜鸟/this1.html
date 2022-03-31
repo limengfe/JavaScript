@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单独使用 this，则它指向全局(Global)对象。</title>
+</head>
+<body> <!--window 就是该全局对象为 [object Window]-->
+    <h2>JavaScript this关键字</h2>
+    <p>实例中，<b>this</b>指向了windows对象</p>
+    <p id="demo"></p>
+    <script>//严格模式同样也是为全局对象
+       //“use strict”
+        var x=this;
+        document.getElementById('demo').innerHTML=x;
+    </script>
+</body>
+</html>

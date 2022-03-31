@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 函数也是对象 -->
+    <script>
+      var fn = new Function() //构造函数  ，实际开发基本不用
+
+      //一般使用声明函数function 函数名([形参1，形参2......]){}
+     function fun () {
+         console.log("你好！")
+        }
+        //调用
+        fun();
+        
+      //使用函数表达式  var 函数名 = function(){}
+      
+      var  f =function(){
+          console.log("好的")
+      }
+      //调用
+      f();
+     
+      //可以创建匿名函数
+      [function () {
+          console.log("匿名函数")
+        }]
+       
+    </script>
+</body>
+</html>

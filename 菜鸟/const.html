@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const</title>
+</head>
+<body>
+    <h2>JavaScript const </h2>
+    <p>const用于声明一个或者多个变量，声明是必须初始化，且初始化后值不可修改</p>
+    <p id="demo"></p>
+    <script>
+        try{
+            const pI=3.1415926;
+                  pI=3.14;//不能修改
+          }
+          catch(err){
+              document.getElementById('demo').innerHTML=err;
+          }
+    </script>
+</body>
+</html>

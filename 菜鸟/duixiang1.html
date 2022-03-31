@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问对象的方式</title>
+</head>
+<body>
+    <h2>访问对象的二种方式。</h2>
+    <p id="demo"></p>
+    
+    <script>
+        var LYR = { 
+            name:"李雅茹",
+            height:"160cm",
+            weight:"80kg",
+            hobby:"吃"
+        };
+        document.getElementById("demo").innerHTML=
+        LYR.name+"身高"+LYR["height"]+",体重"+LYR.weight+",喜欢"+LYR["hobby"]+".";
+    </script>
+</body>
+</html>

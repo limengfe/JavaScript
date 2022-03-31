@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--自己调用自己 -->
+
+    <script>
+        //   function(){alert('Hello')}     此时报错没有函数名
+        //   (function(){alert('Hello')} )  此时不报错  加上括号表示一个整体
+
+        // 立即执行函数
+       (function   (a) {
+          return document.write('数字为' +a);
+       })(2);
+</script>
+</body>
+</html>

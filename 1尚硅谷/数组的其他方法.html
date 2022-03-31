@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        //concat()连接数组     可以连接多个数组，逗号隔开 ，还可以直接添加元素  
+        let a = ['a','b','c'];
+        let b = ['d','f'];
+        let c = ['d'];
+        const result =  a.concat(b,c,'f','g');//对数组无效 ，需要建立新的数组来接收
+        console.log(result);//Array(8)
+
+        //join() 可以将数组转化为字符串  对原数组没影响
+        let d = ['a','b','c'];
+         re = d.join('-');   //可以自定义连接符  ''中间就是
+         console.log(re);   //a-b-c
+
+         //reverse(); 反转数组  会改变原数组
+         let e = [4,5,6];
+         console.log( e.reverse());//6 5 4
+
+         //sort()排序   会改变原数组   而且需要定义一个回调函数 来保证顺序正确 原因是 他始终那招unicode编码排序的
+         let x =[2,3,11];
+         console.log(x.sort()) ;//11 2 3   错误    英文编码的话会正确
+
+        //  解决
+        let y = [11,2,3];
+        y.sort(function(a,b){     //设置二个参数别忘了
+            return a-b;
+        })
+        console.log(y);//2 3 11 
+        //如果需要降序  return b-a 即可
+
+
+
+ </script>
+</body>
+</html>

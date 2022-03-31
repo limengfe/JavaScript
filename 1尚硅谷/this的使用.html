@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 关于this  隐含的参数   浏览器传递的
+        //1.在函数中调用   this指向window    调用函数就是window的方法
+        //2.在方法中调用   this指向对象
+
+        function fun(){
+            document.write(this);
+        }
+        fun();//[object Window]     
+         document.write("<br>");
+        //创建一个对象
+        var obj = {
+            name:"飞飞",
+            sayName:fun
+        };
+        document.write(obj.sayName == fun); //true
+        document.write("<br>");
+        obj.sayName();//[object Object]     指向的不一样
+        document.write("<br>");
+        
+        var age = 20;
+
+        function fun2(){
+            document.write(this.age);
+        }
+        
+        var obj2 = {
+            age:18,
+            a:fun2
+        }
+        obj2.a();//18                  obj2.a == fun2      但是obj2.a()~age==18 //  fun2()~age=20
+        document.write("<br>");
+        fun2();//20
+        
+    </script>
+</body>
+</html>

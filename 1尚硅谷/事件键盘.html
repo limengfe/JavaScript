@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function ( ) {
+            var int1 = document.getElementById("int1");
+            //绑定按下键盘事件
+            int1.onkeydown  = function(event){
+                
+                event = event ||window.event;//兼容性问题
+                var x = event.key;//键盘输入的值
+                document.getElementById('demo').innerHTML = '你按下的是:'+x;
+            }
+            
+          }
+    </script>
+</head>
+<body>
+    <p>在键盘上输入即可查看输入的值</p>
+    <input type="text" size="30" id="int1">
+    <p id="demo"></p>
+</body>
+</html>

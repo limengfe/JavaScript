@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        .div2{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        .div3{
+            border: 5px solid red;
+        }
+        
+    </style>
+    <script>
+        window.onload = function (){
+        var btn = document.getElementById("btn");
+        var div = document.getElementById("di");
+          btn.onclick = function (){
+            //   div.className = "div2"; //可以直接修改样式
+
+                 div.className += " div3";//添加样式  记得引号后加空格
+          }
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">修改样式</button><br><br>
+    <div id="di" class="div1"></div>
+</body>
+</html>

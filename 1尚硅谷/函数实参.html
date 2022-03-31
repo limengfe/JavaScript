@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 实参类型
+
+        // 圆面积
+        function s (r){
+          return 3.14*r*r;
+        }
+        document.write(s(10)); //可以是number
+        document.write("<br>");
+
+        // 判断偶数
+        function ou(a){
+            return  a%2 ==0;
+        }
+        document.write(ou(10)+"<br>");
+
+        function sayHello(name,age,like){
+          return document.write('姓名：'+name + '今年：'+age + '岁' + '喜欢：' + like)
+        }
+        sayHello('fei ',18,'wo');
+        document.write("<br>");
+
+        function say(o){
+          return document.write('姓名：'+o.name + '今年：'+o.age + '岁' + '喜欢：' + o.like)
+        }
+        var obj = {
+            name:"f",
+            age:18,
+            like:'yellow'
+        };
+        say(obj);//可以是对象
+        document.write('<br>')
+
+       function ok(){
+          document.write('你好啊！')
+       }
+       ok(s(10));
+    </script>
+</body>
+</html>

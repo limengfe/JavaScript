@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this关键字</title>
+</head>
+<body>
+    <h2>JavaScript this关键字</h2>
+    <p>实例中，<b>this</b>指向的<b>person</b>对象。</p>
+    <P>因为person对象是message方法的所有者。</P>
+    <p id="demo"></p>
+    <script>
+        //创建一个对象
+        var person={
+            name:"李孟飞",
+            age:18,
+            message: function(){
+            // return this  结果为[object Object]    
+            return this.name+""+this.age;//this指向的是方法的对象
+        }
+        };  //显示数据
+       document.getElementById("demo").innerHTML=person.message();
+    </script>
+</body>
+</html>

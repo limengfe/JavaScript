@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #box1{
+          width: 200px;
+          height: 200px;
+          background-color: yellowgreen;
+          border: 1px solid black;
+      }
+      #sp{
+          background-color: rgb(102, 218, 208);
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var box1 = document.getElementById("box1");
+        var sp = document.getElementById("sp");
+       
+         sp.onclick = function (event) {
+
+            //解决把
+           //取消冒泡  event.cancelBubble = true;  
+           event = event || window.event;    //解决事件兼容问题
+           event.cancelBubble = true;        //取消冒泡
+            alert('我是span')
+        }
+        box1.onclick = function (event) {
+            event = event || window.event;   //解决事件兼容问题
+            event.cancelBubble = true;       //取消冒泡
+            alert('我是div')
+        }
+        document.body.onclick = function () {
+            alert('我是body')
+        }   //点击span时，div body也会触发  这就是冒泡
+        
+       //解决  
+       //取消冒泡
+
+
+      }
+
+    </script>
+</head>
+<body>
+    <div id="box1">我时div
+        <span id="sp">
+            我是span
+        </span>
+    </div>
+</body>
+</html>

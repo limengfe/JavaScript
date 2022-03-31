@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace正则表达式</title>
+</head>
+<body>
+    <p>用飞飞取代猪丽。</p>
+    <button type="button" onclick="myFunction()">点我</button>
+    <p id="demo">你好，猪丽！</p>
+    <script>
+        function myFunction(){
+            var str=document.getElementById("demo").innerHTML;
+            var str1=str.replace(/猪丽/i,"飞飞")//也可以使用（"猪丽"，"飞飞"）使用字符串
+            document.getElementById("demo").innerHTML=str1;
+        }
+    </script>
+</body>
+</html>

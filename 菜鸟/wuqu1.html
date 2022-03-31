@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var x=10;
+        var y="10";
+        var z=20;
+        document.getElementById('demo').innerHTML=Boolean(x==y);//常规比较数据类型被忽略的。
+        document.getElementById("demo1").innerHTML=Boolean(x===y);//严格的比较运算不可以。switch使用的严格比较。
+         switch(z){
+            //弹窗出现 case 20:alert('Hello');
+            case "20":alert("Hello")//弹窗不出现。
+         }
+    </script>
+</body>
+</html>

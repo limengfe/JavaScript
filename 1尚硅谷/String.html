@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String属性
+        // length	字符串的长度
+        var arr = 'Hello';
+        console.log(arr.length);//5
+
+        // 方法 对原字符串无效  需要设置新的字符串来接收
+        //charAt()	返回在指定位置的字符。
+        var arr2 = 'hello';
+        console.log(arr2.charAt(2));//l
+        //charCodeAt()	返回在指定的位置的字符的 Unicode 编码。
+        console.log(arr2.charCodeAt());//104   
+        //concat()	连接字符串。
+        var arr3 = 'he';
+        var arr4 = 'llo';
+        console.log(arr3.concat(arr4));//hello
+        //fromCharCode()	从字符编码创建一个字符串。
+        var arr5 = '';
+        console.log(String.fromCharCode(64,54,84));
+        //indexOf()	检索字符串。
+        
+        console.log('hello world'.indexOf('', 3));// returns 3
+        //lastIndexOf()	从后向前搜索字符串。
+        //slice()	提取字符串的片断，并在新的字符串中返回被提取的部分。
+        var arr6 = '12345';
+        console.log(arr6.slice(1,3));//23  1,3是索引  从开始索引截取，结束索引不截取
+        //split()	把字符串分割为字符串数组。
+        console.log(arr6.split(3,2)); //从3元素截取   2-截取成2个数组
+        //toUpperCase()	把字符串转换为大写。
+        var arr11 = 'Hello';
+        console.log(arr11.toUpperCase());//HELLO
+        //toLowerCase()	把字符串转换为小写。
+        console.log(arr11.toLowerCase());//hello
+        // toString()	返回字符串。
+    </script>
+</body>
+</html>

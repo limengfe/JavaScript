@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function person(first,last) {
+            this.first=first;
+            this.last=last;
+            this.age=18; //函数内可以添加属性
+        }
+           // var person.love="yellow";   会直接提示错误，不可以在函数外边添加对象属性
+           //可以采取prototype 原型对象实现新建属性
+           person.prototype.love="yellow";
+        var baba = new person("李","孟飞");
+        document.getElementById("demo1").innerHTML=baba.first+baba.last+"今年"+baba.age;//可访问函数内可以添加属性
+         document.getElementById("demo2").innerHTML="飞飞的爱好是"+baba.love;
+ </script>
+</body>
+</html>

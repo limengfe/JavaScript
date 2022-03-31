@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //this情况
+    //  1.以函数形式调用时，this永远都睡Window
+    //  2.以方法调用时，this是调用方法的对象
+    //  3.以构造函数调用时，this是新创建的那个对象
+    //  4.使用call和apply时，this是指定的那个对象   
+       // call()和 apply() 都是函数对象的方法 需要通过函数对象调用
+       function fn(){
+           document.write(1);
+       }
+       fn();//1
+       fn.apply();//1
+       fn.call();//1
+       document.write("<br>");
+
+       //call()和 apply() 可以将对象作为参数
+       var obj={name:"li"}
+         function fn2(){
+             document.write(this);
+         }
+         fn2.call(obj);
+         fn2.apply(obj);
+         document.write("<br>")
+         //call可以在对象后，传递实参
+         //apply也可以，但是需要把实参通过数组形式传递
+
+         function fn3 (a,b){
+             document.write('a='+ a);
+             document.write('b='+ b);
+         }
+         fn3.call(obj,2,3);
+         fn3.apply(obj,[2,3]);
+
+         //this
+         var name = '飞';
+         function f (){
+             console.log(this.name);
+         }
+         var a = {
+             name:'fei'
+         }
+         f.call();   //不加对象  指向window   为飞
+         f.apply();  //不加对象  指向window   为飞
+         f.call(a);  //fei          指向a对象的name           
+         f.apply(a); //fei          指向a对象的name
+
+    </script>
+</body>
+</html>

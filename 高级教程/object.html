@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var person= new Object();
+        person.firstName="李";
+        person.lastName="孟飞";
+        person.age="18";
+        person.love="yellow";
+         document.write(person.firstName+person.lastName+"今年"+person.age+"岁"+"喜欢"+person.love+"<br>");
+         var girl = {
+             name:"刘亚丽",
+             love:"吃屎"}
+         document.getElementById('demo').innerHTML = ("<br>"+"人是"+girl.name+"喜欢"+girl.love);
+    </script>
+</body>
+</html>

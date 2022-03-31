@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 在调用函数时，浏览器会传递二个隐含的参数
+        //1.this
+        //2.封装实参的对象arguments
+          //-是一个类数组对象  不是数组  但可以使用索引
+          //-我们传递的实参都会在arguments中保存
+          //-arguments.length可以表示实参的长度
+            //arguments[0]表示第一个实参...
+            //arguments[1]表示第二个实参...
+              //还有一个callee属性
+              //这个属性对应当前的函数对象
+         function fn(){
+             console.log(arguments instanceof Array);//是否存在原型链    不确定
+             console.log(Array.isArray(arguments));//不是数组
+             console.log(arguments.length);//实参长度
+             console.log(arguments.callee);//函数语句
+         }     
+         fn(1,2,true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javaScript HTML DOM</h2>
+    <P>1</P>
+    <P>2</P>
+    <P>点击修改颜色。</P>
+    <button type="button" onclick="myFunction()">点我</button>
+    <script>//myCollection TagName
+        function myFunction() {
+            var myCollection = document.getElementsByTagName("p");//找到元素   集合起来
+            var i;
+            for(i=0;i<myCollection.length;i++) {
+                myCollection[i].style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

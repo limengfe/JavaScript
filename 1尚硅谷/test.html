@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #big{
+             width: 100px;
+             height: 100px;
+             background-color: aqua;
+             position: absolute;
+            }
+           
+    </style>
+    <script>
+        window.onload = function(){
+        //    当事件触发时，浏览器将实参传递到响应函数
+        //     比如 鼠标的坐标，键盘在那按下。  
+           var big = document.getElementById('big');
+          
+
+           document.onmousemove = function (event) {
+               event = event || window.event;  //兼容IE事件对象问题
+               
+               //    chrome浏览器滚顶条时body
+               //    火狐时html
+               // 需要兼容
+               var st = document.body.scrollTop ||document.documentElement.scrollTop;  //浏览器兼容
+               var sl = document.body.scrollTop ||document.documentElement.scrollLeft;   
+               
+               var left = event.clientX;     //鼠标所在的X偏移量
+               var  top = event.clientY;     //鼠标所在的Y偏移量
+
+            
+            
+               big.style.left = left + sl + 'px';
+               big.style.top = top +st+ 'px';
+
+           }
+
+
+        }
+    </script>
+</head>
+<body style="height: 1100px; width: 1000px;">
+    <div id="big"></div><br>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function createPerson(name,age,gender){
+               var obj = new Object();
+               obj.name = name;
+               obj.age = age;
+               obj.gender = gender;
+               obj.sayName = function(){
+                   alert(this.name);
+               }
+               return obj;
+           }
+           
+           var obj2 = createPerson('李孟飞',18,'男');
+           var obj3 = createPerson('杨幂',32,'女');
+           var obj4 = createPerson('娜扎',30,'女');
+
+           var arr = [obj2,obj3,obj4];
+           console.log(arr);
+           //1.
+        //    function add(){
+        //        var arr2 = [];
+        //        for(var i = 0 ; i < arr.length ;i++){
+        //            var  p = arr[i];
+        //         if(p.age > 18){
+        //             arr2.push(p);
+        //         }
+        //     }
+        //         return arr2;
+        //   }
+        //2.
+        function add(){
+               var arr2 = [];
+               for(var value of arr){
+                   if(value.age > 18){
+                       arr2.push(value);//不加value会变成空值☆
+                    }
+                }
+                return arr2;
+            }
+                
+            var result = add();
+            console.log(result);
+            
+           
+    </script>
+</body>
+</html>

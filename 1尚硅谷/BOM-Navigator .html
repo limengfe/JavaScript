@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Navigator 
+        //由于历史原因，Navigator中，大部分对象都无法使用，不能帮助我们识别浏览器信息了。
+        //因为Navigator 是网景公司的，但是后来倒闭了  为了纪念，查询的信息都是网景公司的
+        //一般我们都是用userAgent(用户代理)来判断
+        //但是在IE11的时候，微软了很多模糊浏览器效果，导致无法分清楚，不同的浏览器
+          //解决：通过属性在对象里查询，可以逮到他
+
+          let ua = window.navigator.userAgent;      //使用正则表达式检查
+
+          if(/firefox/i.test(ua)){                  //火狐浏览器必带火狐字母 不区分大小写查询
+              alert('当前使用的是火狐浏览器！');
+          }else if(/chrome/i.test(ua)){             //谷歌浏览器必带谷歌字母 不区分大小写查询
+              alert('当前使用的是谷歌浏览器！');  
+          }else if(/meie/i.test(ua)){               //IE浏览器带Meie字母 不区分大小写查询
+              alert("当前使用的是IE浏览器！");
+          }else if('ActiveXObject' in window){      //IE11模糊浏览器信息，可以使用其独有的属性来查询
+              alert("IE11,枪毙了你！")
+          }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
